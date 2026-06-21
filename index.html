@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Virtual Wardrobe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="top-bar">
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+</div>
+    <!-- Header -->
+     
+<h1>
+    My <span>Virtual</span> Wardrobe
+</h1>
+<h3 id="welcomeUser"></h3>
+
+<h3 class="tagline">
+    Organize. Style. Shine ✨
+</h3>
+
+
+
+    <!-- Add Clothing Form -->
+
+    <div class="form">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="👗 Clothing Name">
+
+        <input
+            type="text"
+            id="brand"
+            placeholder="🏷 Brand">
+
+        <input
+            type="number"
+            id="price"
+            placeholder="₹ Price">
+
+        <select id="category">
+            <option>Top</option>
+            <option>Bottom</option>
+            <option>Shoes</option>
+            <option>Jacket</option>
+        </select>
+
+        <select id="season">
+            <option>Summer</option>
+            <option>Winter</option>
+            <option>Monsoon</option>
+            <option>All Season</option>
+        </select>
+
+        <select id="occasion">
+            <option>Casual</option>
+            <option>College</option>
+            <option>Party</option>
+            <option>Formal</option>
+        </select>
+
+        <input
+            type="text"
+            id="color"
+            placeholder="🎨 Color">
+
+        <input
+            type="file"
+            id="image"
+            accept="image/*">
+
+        <button onclick="addItem()">
+            ➕ Add Item
+        </button>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="searchBar"
+            placeholder="🔍 Search by name, brand, color, category..."
+            onkeyup="searchItems()">
+
+    </div>
+
+    <!-- Filters -->
+
+    <div class="filters">
+
+        <button onclick="filterItems('All')">
+            All
+        </button>
+
+        <button onclick="filterItems('Top')">
+            Tops
+        </button>
+
+        <button onclick="filterItems('Bottom')">
+            Bottoms
+        </button>
+
+        <button onclick="filterItems('Shoes')">
+            Shoes
+        </button>
+
+        <button onclick="filterItems('Jacket')">
+            Jackets
+        </button>
+
+    </div>
+
+    <!-- Collection -->
+
+    <h2>
+        My Collection
+    </h2>
+
+    <div id="wardrobe">
+
+        <!-- Cards generated from JS -->
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-box">
+
+            <div class="footer-card">
+                ❤️
+                <h4>Your Style, Your Way</h4>
+                <p>Keep all your favorite outfits in one place.</p>
+            </div>
+
+            <div class="footer-card">
+                👜
+                <h4>Smart & Organized</h4>
+                <p>Filter, search and manage your wardrobe easily.</p>
+            </div>
+
+            <div class="footer-card">
+                ⭐
+                <h4>Look Amazing</h4>
+                <p>Plan your outfits and shine every day.</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 My Virtual Wardrobe ❤️
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
